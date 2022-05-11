@@ -1,24 +1,18 @@
-let elChiqar =$_(".chiqar-js");
+let elList = $_(".js-list");
 
 
-for (let i = 0; i < pokemons.length; i++) {
-	let list = document.createElement("li");
-	list.setAttribute("class", "col-sm-4 col-md-3 col-lg-2 text-center p-3 mx-2 mb-2 border border-2 border-success rounded bg-light");
+pokemons.forEach(function (pokemon) {
+	var newLiItem = createElement('li', 'list-item',);
+	var newImg = createElement('img', 'img img-fluid');
+	newImg.src = pokemon.img;
 
-	let image = document.createElement("img");
-	image.src = pokemons[i].img;
-	list.append(image);
+	var newLiName = createElement('p', 'item-name', pokemon.name);
+	var newLiType = createElement('p', 'item-span', pokemon.type);
 
-	let ism = document.createElement("h4");
-	ism.textContent = pokemons[i].name;
-	list.append(ism);
-
-
-	let turi = document.createElement("p");
-	turi = pokemons[i].type;
-
-	list.append(turi);
-	elChiqar.append(list);
-
-	console.log(pokemons);
-}
+	
+	newLiItem.appendChild(newImg);
+	newLiItem.appendChild(newLiName);
+	newLiItem.appendChild(newLiType);
+	
+	elList.appendChild(newLiItem);
+});

@@ -1,0 +1,35 @@
+
+header {
+  background: url(./images/images.png);
+  background-repeat: no-repeat;
+}
+
+.list-item {
+  margin: 8px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  border: 3px solid #361caa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+
+.item-name {
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+}
+
+.item-span {
+  color: #464545;
+}
+
+
+.span {
+  font-size: 42px;
+  color: #ecff40;
+  text-align: center;
+  align-items: center;
+}
