@@ -2,12 +2,12 @@ let elList = $_(".js-list");
 
 
 pokemons.forEach(function (pokemon) {
-	var newLiItem = createElement('li', 'list-item',);
-	var newImg = createElement('img', 'img img-fluid');
+	let newLiItem = createElement('li', 'list-item',);
+	let newImg = createElement('img', 'img img-fluid');
 	newImg.src = pokemon.img;
 
-	var newLiName = createElement('p', 'item-name', pokemon.name);
-	var newLiType = createElement('p', 'item-span', pokemon.type);
+	let newLiName = createElement('p', 'item-name', pokemon.name.toUpperCase());
+	let newLiType = createElement('p', 'item-span', pokemon.type);
 
 	
 	newLiItem.appendChild(newImg);
@@ -16,3 +16,4 @@ pokemons.forEach(function (pokemon) {
 	
 	elList.appendChild(newLiItem);
 });
+
